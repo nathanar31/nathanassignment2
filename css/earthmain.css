@@ -1,0 +1,719 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: TWK Lausanne;
+}
+
+body {
+/*min-height: 100vh;*/
+background-color: black;
+overflow-x: hidden;
+width:100%;
+display: grid;
+place-items: center;
+
+
+}
+
+
+.lineartefact {
+  position: absolute;
+  top: 210%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.lineartefact img {
+  width: 1300px; /* Adjust the width to make it smaller */
+  height: auto; /* Adjust the height to make it smaller */
+  display: block; 
+  margin: auto; /* Center the image within the container */
+}
+
+
+
+
+.backgroundinfo {
+  background-color: black;
+/*  width: 80%;*/
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px 30px; /* Adjust the gap value as needed */
+  margin-top: 1200px; /* Adjust the margin-top value as needed */
+}
+
+.backgroundinfo .planetrotate {
+  overflow:hidden;
+}
+
+.backgroundinfo .planetrotate img{
+  padding-left: 30px;
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+}
+
+.backgroundinfo .righttext {
+  display: flex;
+  align-items: flex-start; /* Vertical alignment, change to 'center' or 'flex-end' if needed */
+  justify-content: space-between; /* Horizontal alignment, change to 'flex-start' or 'flex-end' if needed */
+}
+
+
+.backgroundinfo .righttext .text{
+  padding-left: 20px;
+}
+
+.backgroundinfo .righttext .text p{
+  font-size: 20px;
+  font-weight: 300 ;
+  line-height: 24px;
+  letter-spacing: 0px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  color:white;
+}
+
+
+
+.atmosphertitle p {
+  margin-top: 700px;
+  font-size: 30px;
+  font-weight: 350;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  color: white;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 1); /* Adjust the values for the outer glow */
+}
+
+
+
+
+/*.backgroundinfo .text {
+  color:white;
+  font-weight: 300;
+  font-size: 1vw;
+}
+*/
+.ellipse {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -300px;
+  left: -300px;
+  border-radius: 300px;
+  border: 0.5px solid;
+  border-color: #ffffff;
+}
+
+.earthicon {
+  position: absolute;
+  top: 150%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+}
+
+.earthicon img {
+  width: 200px; /* Adjust the width to make it smaller */
+  height: 200px; /* Adjust the height to make it smaller */
+  display: block; /* Ensure the image is treated as a block element */
+  margin: auto; /* Center the image within the container */
+}
+
+
+.earthimagetop {
+  position: absolute;
+  top: 20%; /* Set the initial position to 20% of the viewport height */
+  right: -500px; /* Set the initial horizontal position */
+  width: auto;
+  max-height: 200vh; /* Set the maximum height to 60% of the viewport height */
+  background-position: center;
+  transform: rotate(-90deg);
+  animation: slideInFromTop 1s ease-out; /* Use the slideInFromTop animation */
+}
+
+@keyframes slideInFromTop {
+  0% {
+    top: -40%; /* Set the initial position to -40% of the viewport height */
+    opacity: 0; /* Set the initial opacity to 0 */
+  }
+  100% {
+    top: 20%; /* Set the final position to 20% of the viewport height */
+    opacity: 1; /* Set the final opacity to 1 */
+  }
+}
+
+@media (max-width: 700px) {
+    .earthimagetop{max-height: 80vh;
+    }
+    .backgroundinfo .righttext .text{
+    padding-left: 0px;
+    padding-right: 150px;
+    }
+    .moonscontent {
+      margin-left: -180px;
+      max-width: 28.5em; /* 600px / 16px = 37.5em */
+
+  .moontext .text2 p {
+  font-size: 1em; /* 20px / 16px = 1.25em */
+  font-weight: 300;
+  line-height: 1.4em; /* 24px / 16px = 1.5em */
+  letter-spacing: 0px;
+  padding-bottom: 15px; /* 15px / 16px = 0.9375em */
+  padding-right: 20px; /* 20px / 16px = 1.25em */
+  margin: 0;
+}
+
+
+
+}
+
+
+}
+@media (max-width: 900px) {
+
+    .backgroundinfo {
+    width: 80%;
+    grid-template-columns: 1fr;
+    grid-gap: 100px; /* Adjust the gap value as needed */
+    }
+
+.flex-container {
+ margin-left: -180px;
+
+}
+
+}
+
+.flex-container {
+ margin-top: 100px;
+/* background-color: blue;*/
+ width: 70%; /* Adjusted width for 2 boxes in a row with margin and padding */
+ height: auto;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+ grid-gap: 200px;
+ padding-bottom: 40px;
+ padding-top: 40px;
+}
+
+.flex-box {
+    position: relative;
+    /* background-color: red; */
+    width: 200px;
+    height: 200px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 200px;
+    margin: 10px;
+    transition: transform 0.3s ease; /* Adding smooth transition */
+}
+
+.flex-box:hover {
+    transform: scale(1.2); /* Increase size on hover */
+}
+
+.flex-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+/*.flex-container {
+  background-color: red;
+  padding: 2%;
+  margin-top: 300px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 250px;
+  justify-content: center;
+}
+
+.flex-row {
+  justify-content: center;
+  display: flex;
+  gap: 20px;
+
+}
+
+.flex-item {
+  margin-left: 20px;
+  justify-content: center;
+  flex: 3;
+  max-width: calc(40% - 1px);
+  position: relative;
+  
+  transition: transform 0.3s;
+}
+
+.flex-item img {
+  justify-content: center;
+  width: 60%; 
+  height: auto;
+
+}
+
+.flex-item:hover{
+  transform: scale(1.2); 
+}
+
+.caption {
+  
+  position: absolute;
+  bottom: -70px;
+  left: -80px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+
+}
+*/
+  .accordion-container{
+    padding: 10px;
+    margin-top: 350px;
+    width: 70%;
+  }
+
+
+  /* accordion title text styles */
+    .accordion-container p.accordion {
+     color: white;
+      font-size: 1.5em;
+    }
+
+    /* accordion content text styles */
+   .accordion-container .accordion-content p {
+  color: white;
+  font-size: 40px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1); /* Add an outer glow effect */
+}
+
+
+    /* accordion content link styles */
+    .accordion-container .accordion-content a {
+     color: white;
+      font-size: 25px;
+      font-style: italic;
+    }
+
+    /* accordion title styles */
+    .accordion-container .accordion {
+      cursor: pointer;
+      padding: 15px 15px;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    /* accordion icon box styles */
+    .accordion-container .accordion::after {
+      content: '✕';
+      float: right;
+      transform: rotate(-45deg);
+      font-size: 18px;
+      color: white;
+      transition: .2s ease-out;
+
+    }
+
+    /* accordion icon box styles: opened  */
+    .accordion-container .active::after {
+      content: "✕";
+      transform: rotate(0deg);
+      font-size: 18px;
+      color: white;
+    }
+
+    /* accordion content box styles: default */
+    .accordion-container .accordion-content {
+
+      padding: 0 10px;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+      border-bottom: 1px solid #999;
+    }
+
+
+.moons p {
+  margin-top: 300px;
+  font-size: 30px;
+  font-weight: 350;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  color: white;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 1); /* Adjust the values for the outer glow */
+}
+
+.moonscontent {
+  width: 70%;
+  padding: 1.875em;
+  padding-left: 3.125em;
+  padding-right: 3.125em;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(0.625em);
+  margin-top: 6.25em;
+  margin-bottom: 15em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3.125em;
+  border-radius: 0.9375em;
+  box-shadow: 0 0 0.625em rgba(229, 228, 226, 0.4);
+
+  transition: all 0.3s ease-in-out;
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+  .moonscontent {
+    flex-direction: column; /* Change to column layout for smaller screens */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .moonimage img {
+    width: 100%; /* Make the image width 100% for smaller screens */
+  }
+
+
+
+}
+
+.moonscontent:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1.25em rgba(229, 228, 226, 0.7);
+}
+
+.moonimage img {
+  width: 12.5em;
+  height: auto;
+  object-fit: cover;
+  animation: rotateAnimation 9s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.moontext {
+  max-width: 37.5em;
+}
+
+.moontext .text2 {
+  text-align: left;
+  color: white;
+}
+
+.moontext .text2 p {
+  font-size: 1.25em;
+  font-weight: 300;
+  line-height: 1.4em;
+  letter-spacing: 0px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  margin: 0;
+}
+
+.moontext .text2 p span {
+  font-weight: 400;
+}
+
+@keyframes breathing {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+.earthimagebottomcontainer {
+  margin-bottom: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  animation: breathing 3s ease-in-out infinite; /* Adjust the animation duration and easing as needed */
+}
+
+.earthimagebottom {
+  /* max-width: 80%; */
+}
+
+.earthimagebottom img {
+  margin-left: -150px;
+  width: 130%;
+  height: 10%;
+  display: block;
+  animation: breathing 3s ease-in-out infinite; /* Apply the breathing animation to the image */
+}
+
+
+.line {
+  top: 200px;
+  left:100px;
+  position: relative;
+  width: 750px; /* Adjust the length of the line */
+  height: 0.1px; /* Adjust the thickness of the line */
+  background-color: white; /* Adjust the color of the line */
+}
+
+.line2 {
+  top: 150px;
+  left:400px;
+  position: relative;
+  width: 0.1px; /* Adjust the length of the line */
+  height: 750px; /* Adjust the thickness of the line */
+  background-color: white; /* Adjust the color of the line */
+}
+
+
+
+
+.header {
+  position: fixed;
+  top: 30px;
+  left: 40px;
+  width: 60%;
+  padding: 10px 30px;
+  background: linear-gradient(rgba(255,248,248,0.10), rgba(0,0,0,0.02));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 100;
+
+}
+/*
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 5%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+*/
+.header:hover::before {
+  left: 95%;
+}
+
+.logo {                            
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing:-0.5px;
+  cursor: default;
+    transition: 0.3s;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Add an outer glow effect */
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 300;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: 0.3s;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Add an outer glow effect */
+}
+
+.navbar a:hover {
+  color: #f00;
+}
+
+#menu-icon {
+  font-size: 36px;
+  color: #fff;
+  display: none;
+}
+
+/* BREAKPOINTS */
+@media (max-width: 992px) {
+  .header {
+    padding: 1.25rem 4%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 4%;
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 1.5rem 0;
+
+  }
+
+  .nav-bg {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width: 65%;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    display: none;
+  }
+
+  .nav-bg.active {
+    display: block;
+  }
+}
+
+
+.earthbigtext {
+  position: absolute;
+  top: 250px;
+  left: 200px;
+  margin-top: 10px;
+  text-shadow: 0px 0px 23px #ffffff;
+  font-family: 'TWK Lausanne';
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 16vw;
+  letter-spacing: -0.06em;
+  line-height: normal;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: fadeInAndSlide 1.5s forwards;
+}
+
+@keyframes fadeInAndSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .earthbigtext {
+    left: 0.5em; /* Adjust the left value for smaller screens */
+  }
+
+  .accordion-container{
+    margin-left: -180px;
+   width: 50%;
+  }
+  .moons p {
+   margin-left: -170px;
+
+}
+
+.atmosphertitle p {
+  margin-left: -180px;
+}
+
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s ease-out; /* Add transition for a smoother effect */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); /* Adjust the gradient colors and transparency */
+  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+}
+
+.back-to-top:hover {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2)); /* Adjust the hover gradient colors and transparency */
+}
+
+
+.back-to-top span {
+  color:white;
+  font-size: 3rem;
+  transition: 0.2 ease-out;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add an outer glow effect */
+}
+
+
+.back-to-top:hover span{
+transform: translateY(-4px);
+
+}
+
+
+

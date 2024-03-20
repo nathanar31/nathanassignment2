@@ -1,0 +1,60 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
+
+
+@font-face {
+  font-family: "TWK Lausanne-100";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/653f5083545de08dbfe8e21a/fonts/twklausanne-100.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "TWK Lausanne-200";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/653f5083545de08dbfe8e21a/fonts/twklausanne-200.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "TWK Lausanne-400";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/653f5083545de08dbfe8e21a/fonts/twklausanne-400.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "TWK Lausanne-300";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/653f5083545de08dbfe8e21a/fonts/twklausanne-300.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal-Regular";
+  src: url("https://anima-uploads.s3.amazonaws.com/5c5dad889905e5000dea0e60/NeueMontreal-Regular.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "TWK Lausanne-350";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/61c8b65f56894069aa423a3b/fonts/twklausanne-250.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Neue Montreal-Medium";
+  src: url("https://anima-uploads.s3.amazonaws.com/5bb366cd622faf000ba15827/NeueMontreal-Medium.otf") format("opentype");
+}

@@ -1,0 +1,394 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: TWK Lausanne;
+}
+
+body {
+/*min-height: 100vh;*/
+background-color: black;
+overflow-x: hidden;
+width:100%;
+display: grid;
+place-items: center;
+
+
+}
+
+.planetmainimg {
+  position: relative;
+  margin-top: 5%;
+  margin-right: -10%;
+  width: 80%; 
+  animation: slideInFromTop0 1s ease forwards;
+
+}
+
+
+@keyframes slideInFromTop0 {
+  from {
+    margin-top: -10%;
+  }
+  to {
+    margin-top: 5%;
+  }
+}
+
+.planetmainimg img {
+width: 100%;
+}
+
+.defcontent {
+  width: 70%;
+  padding: 1.875em;
+  padding-left: 3.125em;
+  padding-right: 3.125em;
+/*  background-color: red;*/
+  margin-top: 6.25em;
+  margin-bottom: 6em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3.125em;
+
+
+}
+
+
+.deftext {
+  max-width: 37.5em;
+}
+
+.deftext .text2 {
+  text-align: left;
+  color: white;
+}
+
+.deftext .text2 p {
+  font-size: 1.25em;
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  line-height: 1.4em;
+  letter-spacing: 0px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  margin: 0;
+}
+
+
+.moons p {
+  margin-top: 8em; /* 300px / 16px (assuming the root font size is 16px) */
+  font-size: 1.875em; /* 30px / 16px */
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  line-height: 1.5em; /* 24px / 16px */
+  letter-spacing: -0.0375em; /* -0.6px / 16px */
+  padding-bottom: 0.9375em; /* 15px / 16px */
+  padding-right: 1.25em; /* 20px / 16px */
+  color: white;
+  text-shadow: 0 0 0.375em rgba(255, 255, 255, 1); /* Adjust the values for the outer glow */
+}
+
+.flex-container {
+ margin-top: 100px;
+/* background-color: blue;*/
+ width: 100%; /* Adjusted width for 2 boxes in a row with margin and padding */
+ height: auto;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+ grid-gap: 50px;
+ padding-bottom: 40px;
+ padding-top: 40px;
+}
+
+.flex-box {
+    position: relative;
+/*    background-color: red; */
+    width: 8em;
+    height: 8em;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 200px;
+    margin: 10px;
+    transition: transform 0.3s ease; /* Adding smooth transition */
+}
+
+.flex-box:hover {
+    transform: scale(1.2); /* Increase size on hover */
+}
+
+
+.flex-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+}
+
+.button-container button {
+  margin: 6px 0; /* Add space between buttons */
+  padding: 13px 23px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  background: linear-gradient(rgba(255, 248, 248, 0.1), rgba(0, 0, 0, 0.1));
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white; /* White text color */
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor on hover */
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  transition: background-color 0.3s, box-shadow 0.3s; ; /* Smooth background color transition */
+}
+
+.button-container button:hover {
+  background-color: black;
+  box-shadow: 0 0 10px white;
+}
+
+
+.header {
+  position: fixed;
+  top: -100px; /* Start off-screen */
+  left: 40px;
+  width: 60%;
+  padding: 10px 30px;
+  background: linear-gradient(rgba(255, 248, 248, 0.1), rgba(0, 0, 0, 0.1));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  z-index: 100;
+  animation: slideInFromTop 1s ease forwards; /* Apply animation */
+}
+
+@keyframes slideInFromTop {
+  from {
+    top: -100px; /* Start position */
+  }
+  to {
+    top: 30px; /* End position */
+  }
+}
+/*
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 5%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+*/
+.header:hover::before {
+  left: 95%;
+}
+
+/*.mainlogo{
+  width: 18px;
+  height: 18px;
+}
+
+.mainlogo img {
+  width: 100%;
+
+}*/
+
+.logo {                           
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "TWK Lausanne-400", Helvetica;
+  font-weight: 400;
+  letter-spacing:-0.5px;
+  cursor: default;
+    transition: 0.3s;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Add an outer glow effect */
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 11px;
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: 0.3s;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Add an outer glow effect */
+}
+
+.navbar a:hover {
+  color: #f00;
+}
+
+#menu-icon {
+  font-size: 36px;
+  color: #fff;
+  display: none;
+}
+
+
+
+
+.planetbigtext {
+  position: absolute;
+  top: 250px;
+  left: 200px;
+  margin-top: 10px;
+  text-shadow: 0px 0px 23px #ffffff;
+  font-family: "TWK Lausanne-400", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16vw;
+  letter-spacing: -0.06em;
+  line-height: normal;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: fadeInAndSlide 1.5s forwards;
+}
+
+@keyframes fadeInAndSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s ease-out; /* Add transition for a smoother effect */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); /* Adjust the gradient colors and transparency */
+  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+}
+
+.back-to-top:hover {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2)); /* Adjust the hover gradient colors and transparency */
+}
+
+
+.back-to-top span {
+  color:white;
+  font-size: 3rem;
+  transition: 0.2 ease-out;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add an outer glow effect */
+}
+
+
+.back-to-top:hover span{
+transform: translateY(-4px);
+}
+
+
+
+/*BREAKPOINTS*/
+
+
+
+
+@media (max-width: 992px) {
+  .header {
+    padding: 1.25rem 4%;
+  }
+}
+
+@media (max-width: 768px) {
+
+
+  .planetbigtext {
+    margin-left: -1em; /* Adjust the left value for smaller screens */
+  }
+
+
+
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 4%;
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 1.5rem 0;
+
+  }
+
+  .nav-bg {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width: 65%;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    display: none;
+  }
+
+  .nav-bg.active {
+    display: block;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .moons p{
+    width: 60%;
+    margin-left: 30%;
+  }
+
+}
+
+
+

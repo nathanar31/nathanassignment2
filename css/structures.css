@@ -1,0 +1,722 @@
+
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: TWK Lausanne;
+
+}
+
+body {
+/*min-height: 100vh;*/
+background-color: black;
+overflow-x: hidden;
+width: 100%;
+display: grid;
+place-items: center;
+
+
+}
+
+
+.imagetop {
+  overflow-x: hidden;
+  z-index: -1;
+  margin-top: -90vh; /* Initial position off-screen at the top */
+  margin-right: -70%;
+  width: 180%;
+  height: auto;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  animation: slideInFromTop3 1s ease forwards; /* Apply animation */
+}
+
+@keyframes slideInFromTop3 {
+  from {
+    margin-top: -90vh; /* Start position off-screen at the top */
+  }
+  to {
+    margin-top: -30vh; /* End position, slide in to the center */
+  }
+}
+
+
+
+
+.imagetop img {
+  overflow-x: hidden;
+    width: 80%;
+    height: auto;
+     transform: rotate(-40deg); 
+}
+
+
+
+
+.sunimage img {
+  width: 90em;
+  height: auto;
+  position: relative;
+  z-index: -1;
+  animation: breathing 2s ease-in-out infinite alternate; /* Apply breathing animation */
+}
+
+@keyframes breathing {
+  from {
+    transform: scale(1); /* Start with normal size */
+  }
+  to {
+    transform: scale(1.1); /* Increase size slightly */
+  }
+}
+
+
+
+.mercuryvenus  {
+
+  position: relative;
+
+}
+
+.mercuryvenus img {
+  width: 100%;
+  height: auto;
+
+
+}
+
+.asteroidtokuiper {
+margin-top:-4%;
+  position: relative;
+
+}
+
+.asteroidtokuiper img {
+
+  width: 100%;
+  height: auto;
+
+
+}
+
+
+
+
+.oortcloudstruct {
+
+  position: relative;
+
+}
+
+.oortcloudstruct img {
+  width: 100%;
+  height: auto;
+
+
+}
+
+
+.moons2 p {
+  font-family: "TWK Lausanne-400", Helvetica;
+  font-weight: 400;
+  margin-top: 31em; /* 300px / 16px (assuming the root font size is 16px) */
+  font-size: 1.875em; /* 30px / 16px */
+  font-weight: 350;
+  line-height: 1.5em; /* 24px / 16px */
+  letter-spacing: -0.0375em; /* -0.6px / 16px */
+  padding-bottom: 0.9375em; /* 15px / 16px */
+  padding-right: 1.25em; /* 20px / 16px */
+  color: white;
+  text-shadow: 0 0 0.375em rgba(255, 255, 255, 1); /* Adjust the values for the outer glow */
+}
+
+
+
+
+
+
+
+.moons p {
+  font-family: "TWK Lausanne-400", Helvetica;
+  font-weight: 400;
+  margin-top: 10em; /* 300px / 16px (assuming the root font size is 16px) */
+  font-size: 1.875em; /* 30px / 16px */
+  font-weight: 350;
+  line-height: 1.5em; /* 24px / 16px */
+  letter-spacing: -0.0375em; /* -0.6px / 16px */
+  padding-bottom: 0.9375em; /* 15px / 16px */
+  padding-right: 1.25em; /* 20px / 16px */
+  color: white;
+  text-shadow: 0 0 0.375em rgba(255, 255, 255, 1); /* Adjust the values for the outer glow */
+}
+
+
+.moonscontent {
+
+  width: 70%;
+  padding: 1.875em;
+  padding-left: 3.125em;
+  padding-right: 3.125em;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(0.625em);
+  margin-top: 6.25em;
+  margin-bottom: 0.1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3.125em;
+  border-radius: 0.9375em;
+  box-shadow: 0 0 0.625em rgba(229, 228, 226, 0.4);
+
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+.moonscontent:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1.25em rgba(229, 228, 226, 0.7);
+}
+
+.moonimage img {
+  width: 15em;
+  height: auto;
+  object-fit: cover;
+/*  animation: rotateAnimation 9s linear infinite;*/
+}
+
+/*@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}*/
+
+.moontext {
+  max-width: 37.5em;
+}
+
+.moontext .text2 {
+  text-align: left;
+  color: white;
+}
+
+.moontext .text2 p {
+  font-family: "TWK Lausanne-200", Helvetica;
+  font-weight: 200;
+  font-size: 1.25em;
+  line-height: 1.4em;
+  letter-spacing: -0.4px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  margin: 0;
+}
+
+.moontext .text2 p span {
+
+ font-family: "TWK Lausanne-400", Helvetica;
+  font-weight: 400;
+
+
+}
+
+
+
+
+.header {
+  position: fixed;
+  top: -100px; /* Start off-screen */
+  left: 40px;
+  width: 60%;
+  padding: 10px 30px;
+  background: linear-gradient(rgba(255, 248, 248, 0.1), rgba(0, 0, 0, 0.1));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  z-index: 100;
+  animation: slideInFromTop 1s ease forwards; /* Apply animation */
+}
+
+@keyframes slideInFromTop {
+  from {
+    top: -100px; /* Start position */
+  }
+  to {
+    top: 30px; /* End position */
+  }
+}
+/*
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 5%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+*/
+.header:hover::before {
+  left: 95%;
+}
+
+/*.mainlogo{
+  width: 18px;
+  height: 18px;
+}
+
+.mainlogo img {
+  width: 100%;
+
+}*/
+
+.logo {                           
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  letter-spacing:-0.5px;
+  cursor: default;
+    transition: 0.3s;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Add an outer glow effect */
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 11px;
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: 0.3s;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Add an outer glow effect */
+}
+
+.navbar a:hover {
+  color: #f00;
+}
+
+#menu-icon {
+  font-size: 36px;
+  color: #fff;
+  display: none;
+}
+
+
+
+
+.mercurybigtext {
+  position: absolute;
+  top: 250px;
+  left: 200px;
+  margin-top: 10px;
+  text-shadow: 0px 0px 23px #ffffff;
+   font-family: "TWK Lausanne-400", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16vw;
+  letter-spacing: -0.06em;
+  line-height: normal;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: fadeInAndSlide 1.5s forwards;
+}
+
+@keyframes fadeInAndSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s ease-out; /* Add transition for a smoother effect */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); /* Adjust the gradient colors and transparency */
+  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+}
+
+.back-to-top:hover {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2)); /* Adjust the hover gradient colors and transparency */
+}
+
+
+.back-to-top span {
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  color:white;
+  font-size: 3rem;
+  transition: 0.2 ease-out;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add an outer glow effect */
+}
+
+
+.back-to-top:hover span{
+transform: translateY(-4px);
+
+}
+
+
+/* Add media query for smaller screens */
+/*@media (max-width: 768px) {
+
+
+
+}
+*/
+
+
+/* BREAKPOINTS FOR NAVIGATION BAR */
+@media (max-width: 992px) {
+  .header {
+    padding: 1.25rem 4%;
+  }
+  .mercuryvenus img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
+.asteroidtokuiper img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
+.oortcloudstruct img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
+.moonscontent {
+    margin-right: 30%;
+    width: 50%;
+  }
+
+    .backgroundinfo {
+    width: 80%;
+    grid-template-columns: 1fr;
+    grid-gap: 100px; /* Adjust the gap value as needed */
+    }
+
+.flex-container {
+ margin-left: -180px;
+
+}
+
+  .mercuryimagetop{
+      width: 65%;
+      max-height: 10vh;
+      right: -30%;
+      transform: rotate(45deg);
+    }
+
+}
+
+
+@media (max-width: 600px){
+
+  .mercuryvenus img {
+  width: 40%;
+  height: auto;
+
+
+}
+
+
+.asteroidtokuiper img {
+
+  width: 40%;
+  height: auto;
+
+
+}
+
+
+
+
+.oortcloudstruct img {
+  width: 40%;
+  height: auto;
+
+}
+
+.moons{
+margin-left:20%;
+
+}
+  .moons p {
+   
+   width: 70%;
+}
+}
+
+}
+
+@media (max-width: 1200px){
+
+.mercuryvenus img {
+  width: 80%;
+  height: auto;
+
+
+}
+
+
+.asteroidtokuiper img {
+
+  width: 80%;
+  height: auto;
+
+
+}
+
+
+
+
+.oortcloudstruct img {
+  width: 80%;
+  height: auto;
+
+
+}
+
+  .moonscontent {
+
+      margin-left: -10%;
+      max-width: 28.5em; /* 600px / 16px = 37.5em */
+    }
+
+.moonscontent {
+    flex-direction: column; /* Change to column layout for smaller screens */
+    align-items: center;
+    text-align: center;
+  }
+
+.moons2 p {
+   margin-left: 10%;
+}
+
+
+
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .sunimage img {
+    margin-left: 0;
+  width: 45em;
+  height: auto;
+
+}
+
+  .mercuryvenus img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.asteroidtokuiper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.oortcloudstruct img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+
+    .mercuryimagetop{
+      width: 65%;
+      max-height: 9vh;
+      margin-right: -50%;
+      transform: rotate(40deg);
+    }
+      .moonscontent {
+    flex-direction: column; /* Change to column layout for smaller screens */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .moonimage img {
+    width: 80%; /* Make the image width 100% for smaller screens */
+  }
+
+
+    .backgroundinfo .righttext .text{
+    padding-left: 0px;
+    padding-right: 150px;
+    }
+
+   .moonscontent {
+
+      margin-left: 30%;
+      max-width: 28.5em; /* 600px / 16px = 37.5em */
+    }
+
+  .moontext .text2 p {
+  font-size: 1em; /* 20px / 16px = 1.25em */
+  font-weight: 300;
+  line-height: 1.4em; /* 24px / 16px = 1.5em */
+  letter-spacing: 0px;
+  padding-bottom: 15px; /* 15px / 16px = 0.9375em */
+  padding-right: 20px; /* 20px / 16px = 1.25em */
+  margin: 0;
+}
+
+  .mercurybigtext {
+    margin-left: -1em; /* Adjust the left value for smaller screens */
+  }
+
+  .accordion-container{
+  margin-left: -30%;
+   width: 50%;
+  }
+
+  .moons p {
+   margin-left: 20%;
+   width: 70%;
+}
+.moons2 p {
+   margin-left: 20%;
+   width: 70%;
+}
+
+
+
+
+.structuretext {
+font-size: 30px;
+
+}
+
+.atmosphertitle p {
+
+margin-left: -25%;
+/*justify-content: center;*/
+}
+
+
+
+
+
+
+
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 4%;
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 1.5rem 0;
+
+  }
+
+  .nav-bg {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width: 65%;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    display: none;
+  }
+
+  .nav-bg.active {
+    display: block;
+  }
+}
+
+@media (max-width: 450px) {
+
+
+  .sunimage img {
+    margin-left: 0;
+  width: 30em;
+  height: auto;
+
+}
+.mercuryvenus img {
+  width: 95%;
+  height: auto;
+  object-fit: cover;
+}
+
+.asteroidtokuiper img {
+  width: 95%;
+  height: auto;
+  object-fit: cover;
+}
+
+.oortcloudstruct img {
+  width: 95%;
+  height: auto;
+  object-fit: cover;
+}
+}
+
+
+
+
+
+

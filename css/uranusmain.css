@@ -1,0 +1,1054 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: TWK Lausanne;
+}
+
+body {
+/*min-height: 100vh;*/
+background-color: black;
+overflow-x: hidden;
+width: 100%;
+display: grid;
+place-items: center;
+
+
+}
+
+
+.lineartefact {
+  position: relative;
+  top: 300%;
+  left: 0; 
+/*  transform: translate(-50%, -50%);*/
+}
+
+.lineartefact img {
+  width: 100%; /* Adjust the width to make it smaller */
+  height: auto; /* Adjust the height to make it smaller */
+/*  display: block; */
+  margin: auto; /* Center the image within the container */
+}
+
+
+
+
+.backgroundinfo {
+/*  background-color: black;*/
+/*  width: 80%;*/
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px 30px; /* Adjust the gap value as needed */
+  margin-top: 600px; /* Adjust the margin-top value as needed */
+}
+
+.backgroundinfo .planetrotate {
+  overflow:hidden;
+}
+
+.backgroundinfo .planetrotate img{
+  padding-left: 30px;
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+}
+
+.backgroundinfo .righttext {
+  display: flex;
+  align-items: flex-start; /* Vertical alignment, change to 'center' or 'flex-end' if needed */
+  justify-content: space-between; /* Horizontal alignment, change to 'flex-start' or 'flex-end' if needed */
+}
+
+
+.backgroundinfo .righttext .text{
+  padding-left: 20px;
+}
+
+.backgroundinfo .righttext .text p{
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  color:white;
+}
+
+
+
+.atmosphertitle p {
+  margin-top: 700px;
+  font-size: 30px;
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: -0.6px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  color: white;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 1); /* Adjust the values for the outer glow */
+}
+
+
+
+
+/*.backgroundinfo .text {
+  color:white;
+  font-weight: 300;
+  font-size: 1vw;
+}
+*/
+.ellipse {
+  position: absolute;
+  width: 43vw; /* 50% of viewport width */
+  height: 43vw; /* 50% of viewport width */
+  top: -25vw; /* 25% of viewport width from the top */
+  left: -25vw; /* 25% of viewport width from the left */
+  border-radius: 25vw; /* 25% of viewport width, creating a perfect circle */
+  border: 0.5px solid;
+  border-color: #ffffff;
+}
+
+
+.mercuryicon {
+  position: relative;
+  top: 150%; /* Center vertically */
+  left: 5%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+}
+
+.mercuryicon img {
+  width: 150px; /* Adjust the width to make it smaller */
+  height: auto; /* Adjust the height to make it smaller */
+  display: block; /* Ensure the image is treated as a block element */
+  margin: auto; /* Center the image within the container */
+}
+
+
+
+.imagetop {
+  z-index: -1;
+    margin-top: -50%;
+    margin-right: -50%; /* Start off-screen to the right */
+    width: 180%;
+    height: auto;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    animation: slideInFromRight2 1s ease forwards; /* Apply animation */
+}
+
+@keyframes slideInFromRight2 {
+    from {
+        margin-right: -150%; /* Start position */
+    }
+    to {
+        margin-right: -50%; /* End position */
+    }
+}
+
+.imagetop img {
+    width: 80%;
+    height: auto;
+    transform: rotate(30deg); /* Rotate the image by 40 degrees */
+}
+
+
+
+/*@keyframes slideInFromTop {
+  0% {
+    top: -200%;
+    opacity: 0;
+  }
+  100% {
+    top: -100%; 
+    opacity: 1; 
+  }
+}*/
+
+/*.mercuryimagetop img {
+
+  width: 100%;
+}
+*/
+
+
+
+
+
+
+.flex-container {
+ margin-top: 100px;
+/* background-color: blue;*/
+ width: 70%; /* Adjusted width for 2 boxes in a row with margin and padding */
+ height: auto;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+ grid-gap: 200px;
+ padding-bottom: 40px;
+ padding-top: 40px;
+}
+
+.flex-box {
+    position: relative;
+/*    background-color: red; */
+    width: 10em;
+    height: 10em;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    justify-items: center;
+    line-height: 200px;
+    margin: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease; /* Adding smooth transition */
+}
+
+.flex-box:hover {
+    transform: scale(1.2); /* Increase size on hover */
+}
+
+
+.flex-box img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  top: 13em;
+  left: 0;
+  width: 100%;
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+
+
+  .accordion-container{
+    padding: 10px;
+    margin-top: 350px;
+    width: 70%;
+  }
+
+
+  /* accordion title text styles */
+    .accordion-container p.accordion {
+      font-family: "TWK Lausanne-300", Helvetica;
+      font-weight: 300;
+     color: white;
+      font-size: 1.5em;
+    }
+
+    /* accordion content text styles */
+   .accordion-container .accordion-content p {
+    font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  color: white;
+  font-size: 40px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1); /* Add an outer glow effect */
+
+}
+
+
+    /* accordion content link styles */
+    .accordion-container .accordion-content a {
+      font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+     color: white;
+      font-size: 25px;
+      font-style: italic;
+    }
+
+    /* accordion title styles */
+    .accordion-container .accordion {
+      font-family: "TWK Lausanne-300", Helvetica;
+      font-weight: 300;
+      cursor: pointer;
+      padding: 15px 15px;
+      margin: 0;
+
+    }
+
+    /* accordion icon box styles */
+    .accordion-container .accordion::after {
+      content: '✕';
+      float: right;
+      transform: rotate(-45deg);
+      font-size: 18px;
+      color: white;
+      transition: .2s ease-out;
+
+    }
+
+    /* accordion icon box styles: opened  */
+    .accordion-container .active::after {
+      content: "✕";
+      transform: rotate(0deg);
+      font-size: 18px;
+      color: white;
+    }
+
+    /* accordion content box styles: default */
+    .accordion-container .accordion-content {
+
+      padding: 0 10px;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+      border-bottom: 1px solid #999;
+    }
+
+
+
+
+
+
+.accordion-container2{
+    padding: 1px;
+    margin-top: 10px;
+    width: 90%;
+  }
+
+
+  /* accordion title text styles */
+    .accordion-container2 p.accordion {
+     color: white;
+      font-size: 1.5em;
+    }
+
+    /* accordion content text styles */
+   .accordion-container2 .accordion-content p {
+  color: red;
+  font-size: 40px;
+
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1); /* Add an outer glow effect */
+}
+
+.accordion-container2 .accordion-content a {
+     color: white;
+      font-size: 25px;
+      font-style: italic;
+    }
+
+    /* accordion title styles */
+    .accordion-container2 .accordion {
+      cursor: pointer;
+      padding: 15px 15px;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    /* accordion icon box styles */
+    .accordion-container2 .accordion::after {
+      content: '✕';
+      float: right;
+      transform: rotate(-45deg);
+      font-size: 18px;
+      color: white;
+      transition: .2s ease-out;
+
+    }
+
+    /* accordion icon box styles: opened  */
+    .accordion-container2 .active::after {
+      content: "✕";
+      transform: rotate(0deg);
+      font-size: 18px;
+      color: white;
+    }
+
+    /* accordion content box styles: default */
+    .accordion-container2 .accordion-content {
+
+      padding: 0 10px;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+      border-bottom: 1px solid #999;
+    }
+.accordion-container2 .accordion-content ul {
+  color: white;
+  letter-spacing: -1px;
+  font-size: 40px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1); /* Add an outer glow effect */
+}
+
+.moons p {
+  margin-top: 18.75em; /* 300px / 16px (assuming the root font size is 16px) */
+  font-size: 1.875em; /* 30px / 16px */
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  line-height: 1.5em; /* 24px / 16px */
+  letter-spacing: -0.0375em; /* -0.6px / 16px */
+  padding-bottom: 0.9375em; /* 15px / 16px */
+  padding-right: 1.25em; /* 20px / 16px */
+  color: white;
+  text-shadow: 0 0 0.375em rgba(255, 255, 255, 1); /* Adjust the values for the outer glow */
+}
+
+
+.moonscontent {
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  width: 70%;
+  padding: 1.875em;
+  padding-left: 3.125em;
+  padding-right: 3.125em;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(0.625em);
+  margin-top: 6.25em;
+  margin-bottom: 6em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3.125em;
+  border-radius: 0.9375em;
+  box-shadow: 0 0 0.625em rgba(229, 228, 226, 0.4);
+
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+.moonscontent:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1.25em rgba(229, 228, 226, 0.7);
+}
+
+.moonimage img {
+  width: 12.5em;
+  height: auto;
+  object-fit: cover;
+  animation: rotateAnimation 9s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.moontext {
+  max-width: 37.5em;
+}
+
+.moontext .text2 {
+  text-align: left;
+  color: white;
+}
+
+.moontext .text2 p {
+  font-size: 1.25em;
+  font-weight: 300;
+  line-height: 1.4em;
+  letter-spacing: 0px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  margin: 0;
+}
+
+.moontext .text2 p span {
+  font-weight: 400;
+}
+
+@keyframes breathing {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+.mercuryimagebottomcontainer {
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  animation: breathing 3s ease-in-out infinite; /* Adjust the animation duration and easing as needed */
+}
+
+.mercuryimagebottom {
+  /* max-width: 80%; */
+}
+
+.mercuryimagebottom img {
+
+  margin-top: 20%;
+  margin-left: -150px;
+  width: 130%;
+  height: 10%;
+  display: block;
+  animation: breathing 3s ease-in-out infinite; /* Apply the breathing animation to the image */
+}
+
+
+.line {
+    top: -1000px;
+    left: 10%; /* Initially off the screen to the left */
+    position: relative;
+    width: 750px; /* Adjust the length of the line */
+    height: 0.1px; /* Adjust the thickness of the line */
+    background-color: white; /* Adjust the color of the line */
+    animation: slideIn1 1.2s forwards; 
+}
+
+@keyframes slideIn1 {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 10%; 
+    }
+}
+
+
+.line2 {
+    top: -150%; /* Initially off the screen to the bottom */
+    left: 400px;
+    position: relative;
+    width: 0.1px; /* Adjust the length of the line */
+    height: 750px; /* Adjust the thickness of the line */
+    background-color: white; /* Adjust the color of the line */
+    animation: slideIn2 1.2s forwards; 
+}
+
+@keyframes slideIn2 {
+    from {
+        top: 100%; 
+    }
+    to {
+        top: -150%; 
+    }
+}
+
+
+
+
+
+.header {
+  position: fixed;
+  top: -100px; /* Start off-screen */
+  left: 40px;
+  width: 60%;
+  padding: 10px 30px;
+  background: linear-gradient(rgba(255, 248, 248, 0.1), rgba(0, 0, 0, 0.02));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  z-index: 100;
+  animation: slideInFromTop 1s ease forwards; /* Apply animation */
+}
+
+@keyframes slideInFromTop {
+  from {
+    top: -100px; /* Start position */
+  }
+  to {
+    top: 30px; /* End position */
+  }
+}
+
+
+/*
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 5%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+*/
+.header:hover::before {
+  left: 95%;
+}
+
+/*.mainlogo{
+  width: 18px;
+  height: 18px;
+}
+
+.mainlogo img {
+  width: 100%;
+
+}*/
+
+.logo {                           
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "TWK Lausanne-400", Helvetica;
+  font-weight: 400;
+  letter-spacing:-0.5px;
+  cursor: default;
+    transition: 0.3s;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Add an outer glow effect */
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 11px;
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: 0.3s;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Add an outer glow effect */
+}
+
+.navbar a:hover {
+  color: #f00;
+}
+
+#menu-icon {
+  font-size: 36px;
+  color: #fff;
+  display: none;
+}
+
+
+
+
+.mercurybigtext {
+  position: absolute;
+  top: 250px;
+  left: 200px;
+  margin-top: 10px;
+  text-shadow: 0px 0px 23px #ffffff;
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 16vw;
+  letter-spacing: -0.06em;
+  line-height: normal;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: fadeInAndSlide 1.5s forwards;
+}
+
+@keyframes fadeInAndSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  font-family: "TWK Lausanne-300", Helvetica;
+  font-weight: 300;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s ease-out; /* Add transition for a smoother effect */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); /* Adjust the gradient colors and transparency */
+  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+}
+
+.back-to-top:hover {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2)); /* Adjust the hover gradient colors and transparency */
+}
+
+
+.back-to-top span {
+  color:white;
+  font-size: 3rem;
+  transition: 0.2 ease-out;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add an outer glow effect */
+}
+
+
+.back-to-top:hover span{
+transform: translateY(-4px);
+
+}
+
+
+/* Add media query for smaller screens */
+/*@media (max-width: 768px) {
+
+
+
+}
+*/
+
+@media only screen and (min-width: 768px) {
+
+
+
+}
+
+/* BREAKPOINTS FOR NAVIGATION BAR */
+@media (max-width: 992px) {
+  .header {
+    padding: 1.25rem 4%;
+  }
+  .backgroundinfo {
+    width: 80%;
+    grid-template-columns: 1fr;
+    grid-gap: 100px; 
+    }
+
+.flex-container {
+ margin-left: -180px;
+
+}
+
+.lineartefact {
+  position: relative;
+  top: 360%;
+  left: 0; 
+/*  transform: translate(-50%, -50%);*/
+}
+
+.line {
+    top: -600px;
+    left: 10%; /* Initially off the screen to the left */
+    position: relative;
+    width: 750px; /* Adjust the length of the line */
+    height: 0.1px; /* Adjust the thickness of the line */
+    background-color: white; /* Adjust the color of the line */
+    animation: slideIn1 1.2s forwards; 
+}
+
+@keyframes slideIn1 {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 10%; 
+    }
+}
+
+
+.line2 {
+    top: -90%; /* Initially off the screen to the bottom */
+    left: 400px;
+    position: relative;
+    width: 0.1px; /* Adjust the length of the line */
+    height: 750px; /* Adjust the thickness of the line */
+    background-color: white; /* Adjust the color of the line */
+    animation: slideIn2 1.2s forwards; 
+}
+
+@keyframes slideIn2 {
+    from {
+        top: 100%; 
+    }
+    to {
+        top: -90%; 
+    }
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+
+
+
+
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 4%;
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 1.5rem 0;
+
+  }
+
+  .nav-bg {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width: 65%;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    display: none;
+  }
+
+  .nav-bg.active {
+    display: block;
+  }
+
+
+  .moonscontent {
+    flex-direction: column; /* Change to column layout for smaller screens */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .moonimage img {
+    width: 80%; /* Make the image width 100% for smaller screens */
+  }
+
+
+    .backgroundinfo .righttext .text{
+    padding-left: 0px;
+    padding-right: 150px;
+    }
+    .backgroundinfo {
+    margin-left: 20%;
+    }
+
+    .moonscontent {
+      margin-left: -10%;
+      max-width: 28.5em; /* 600px / 16px = 37.5em */
+    }
+
+  .moontext .text2 p {
+  font-size: 1em; /* 20px / 16px = 1.25em */
+  font-weight: 300;
+  line-height: 1.4em; /* 24px / 16px = 1.5em */
+  letter-spacing: 0px;
+  padding-bottom: 15px; /* 15px / 16px = 0.9375em */
+  padding-right: 20px; /* 20px / 16px = 1.25em */
+  margin: 0;
+}
+
+  .mercurybigtext {
+    margin-left: -1em; /* Adjust the left value for smaller screens */
+  }
+
+  .accordion-container{
+  margin-left: -10%;
+   width: 70%;
+  }
+
+  .moons p {
+   margin-left: -5%;
+}
+
+.atmosphertitle p {
+margin-left: 0;
+/*justify-content: center;*/
+}
+.lineartefact {
+  position: relative;
+  top: 500%;
+  left: 0; 
+/*  transform: translate(-50%, -50%);*/
+}
+
+.flex-container {
+ margin-left: 0;
+
+}
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .moonscontent {
+    flex-direction: column; /* Change to column layout for smaller screens */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .moonimage img {
+    width: 80%; /* Make the image width 100% for smaller screens */
+  }
+
+
+    .backgroundinfo .righttext .text{
+    padding-left: 0px;
+    padding-right: 150px;
+    }
+     .backgroundinfo {
+    margin-left: 0;
+    }
+
+    .moonscontent {
+      margin-left: -25%;
+      max-width: 28.5em; /* 600px / 16px = 37.5em */
+    }
+
+  .moontext .text2 p {
+  font-size: 1em; /* 20px / 16px = 1.25em */
+  font-weight: 300;
+  line-height: 1.4em; /* 24px / 16px = 1.5em */
+  letter-spacing: 0px;
+  padding-bottom: 15px; /* 15px / 16px = 0.9375em */
+  padding-right: 20px; /* 20px / 16px = 1.25em */
+  margin: 0;
+}
+
+  .mercurybigtext {
+    margin-left: -1em; /* Adjust the left value for smaller screens */
+  }
+
+  .accordion-container{
+  margin-left: -25%;
+   width: 70%;
+  }
+
+  .moons p {
+   margin-left: -25%;
+}
+
+.atmosphertitle p {
+margin-left: -25%;
+/*justify-content: center;*/
+}
+.lineartefact {
+  position: relative;
+  top: 500%;
+  left: 0; 
+/*  transform: translate(-50%, -50%);*/
+}
+
+.flex-container {
+ margin-left: -25%;
+
+}
+.mercuryicon {
+  position: relative;
+  top: 150%; /* Center vertically */
+  left: -3%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+}
+
+
+}
+
+@media only screen and (max-width: 460px) {
+
+  .moonscontent {
+    flex-direction: column; /* Change to column layout for smaller screens */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .moonimage img {
+    width: 80%; /* Make the image width 100% for smaller screens */
+  }
+
+
+    .backgroundinfo .righttext .text{
+    padding-left: 0px;
+    padding-right: 150px;
+    }
+     .backgroundinfo {
+    margin-left: -15%;
+    max-width: 65%;
+    }
+
+    .moonscontent {
+      margin-left: -40%;
+      max-width: 24em; /* 600px / 16px = 37.5em */
+    }
+
+  .moontext .text2 p {
+  font-size: 1em; /* 20px / 16px = 1.25em */
+  font-weight: 300;
+  line-height: 1.4em; /* 24px / 16px = 1.5em */
+  letter-spacing: 0px;
+  padding-bottom: 15px; /* 15px / 16px = 0.9375em */
+  padding-right: 20px; /* 20px / 16px = 1.25em */
+  margin: 0;
+}
+
+  .mercurybigtext {
+    margin-left: -1em; /* Adjust the left value for smaller screens */
+  }
+
+  .accordion-container{
+  margin-left: -40%;
+   width: 60%;
+  }
+
+  .moons p {
+   margin-left: -40%;
+}
+
+.atmosphertitle p {
+margin-left: -40%;
+/*justify-content: center;*/
+}
+.lineartefact {
+  position: relative;
+  top: 500%;
+  left: 0; 
+/*  transform: translate(-50%, -50%);*/
+}
+
+.flex-container {
+ margin-left: -40%;
+
+}
+
+.mercuryicon {
+  position: relative;
+  top: 150%; /* Center vertically */
+  left: -7%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+}
+
+
+}
